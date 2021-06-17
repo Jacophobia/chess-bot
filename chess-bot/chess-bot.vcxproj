@@ -139,7 +139,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bishop.cpp" />
     <ClCompile Include="chess-bot.cpp" />
+    <ClCompile Include="ChessPiece.cpp" />
+    <ClCompile Include="Director.cpp" />
+    <ClCompile Include="GameBoard.cpp" />
+    <ClCompile Include="King.cpp" />
+    <ClCompile Include="Knight.cpp" />
+    <ClCompile Include="MoveHistory.cpp" />
+    <ClCompile Include="Pawn.cpp" />
+    <ClCompile Include="Queen.cpp" />
+    <ClCompile Include="Rook.cpp" />
+    <ClCompile Include="RuleBook.cpp" />
+    <ClCompile Include="Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bishop.h" />
+    <ClInclude Include="ChessPiece.h" />
+    <ClInclude Include="Director.h" />
+    <ClInclude Include="GameBoard.h" />
+    <ClInclude Include="King.h" />
+    <ClInclude Include="Knight.h" />
+    <ClInclude Include="MoveHistory.h" />
+    <ClInclude Include="Pawn.h" />
+    <ClInclude Include="Queen.h" />
+    <ClInclude Include="Rook.h" />
+    <ClInclude Include="RuleBook.h" />
+    <ClInclude Include="Timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="PreviousGames.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -2,10 +2,30 @@
 //
 
 #include <iostream>
+#include <memory>
+#include <string>
+
+#include "Director.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int choice = -1;
+    while (choice != 1 && choice != 2) {
+        std::cout << "Would you like to start a new game or load a previous game?" << std::endl;
+        std::cout << "1 - Start a new game" << std::endl;
+        std::cout << "2 - Load a game from a file" << std::endl;
+        std::cin >> choice;
+    }
+    std::unique_ptr<Director> game;
+    if (choice == 1) {
+        game = std::make_unique<Director>();
+    }
+    else {
+        std::string filename = "PreviousGames.txt";
+        game = std::make_unique<Director>(filename);
+    }
+    game->welcome_player();
+    game->enter_game_loop();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
