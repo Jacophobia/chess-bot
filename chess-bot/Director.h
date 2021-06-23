@@ -15,8 +15,8 @@ private:
 	int player_one_time = 300000;
 	int player_two_time = 300000;
 	std::unique_ptr<MoveHistory> gameLog = std::make_unique<MoveHistory>();
-	std::unique_ptr<Timer> p1_timer = std::make_unique<Timer>(player_one_time);
-	std::unique_ptr<Timer> p2_timer = std::make_unique<Timer>(player_two_time);
+	std::shared_ptr<Timer> p1_timer = std::make_shared<Timer>(player_one_time);
+	std::shared_ptr<Timer> p2_timer = std::make_shared<Timer>(player_two_time);
 
 	void display_menu();
 	void display_board();
